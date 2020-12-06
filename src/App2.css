@@ -1,0 +1,225 @@
+/*ola abaixo estão listados com cabeçalho as
+classes, ids e seletores para formatação a
+                   css 
+=====cristiano brito de oliveira======================*/
+
+/*==============[INICIO FORMATAÇÃO P]=================*/
+p {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  /*==============[FIM FORMATAÇÃO P]====================*/
+  
+  /*==============[INICIO FORMATAÇÃO DESCONTO]==========*/
+  .desconto {
+    text-align: center;
+    font-size: 7px;
+  }
+  /*==============[FIM FORMATAÇÃO DESCONTO]=============*/
+  
+  /*==============[INICIO FORMATAÇÃO FORMAS_PAGAMENTOS]=*/
+  #formas_pagamento {
+    color: red;
+  }
+  /*==============[FIM FORMATAÇÃO FORMAS_PAGAMENTOS]====*/
+  
+  /*==============[INICIO FORMATAÇÃO MENU LETRAS]=======*/
+  .menu a {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  /*==============[FIM FORMATAÇÃO MENU LETRAS]===========*/
+  
+  /*==============[INICIO FORMATAÇÃO MENU]===============*/
+  .menu {
+    background-color: red;
+    text-align: center;
+    bottom: 10px;
+    column-width: 100%;
+    position: relative;
+  }
+  /*==============[FIM FORMATAÇÃO MENU]===================*/
+  
+  /*==============[INICIO FORMATAÇÃO RODAPÉ]==============*/
+  #rodape {
+    text-align: center;
+  }
+  /*==============[FIM FORMATAÇÃO RODAPÉ]=================*/
+  
+  /*==============[INICIO FORMATAÇÃO DESCRIÇÃO]================*/
+  .descricao {
+    color: black;
+    font-size: 12px;
+  }
+  /*==============[FIM FORMATAÇÃO DESCRIÇÃO]===================*/
+  
+  /*==============[INICIO FORMATAÇÃO CATEGORIAS]===============*/
+  .categorias {
+    column-gap: normal;
+    float: left;
+    margin-right: 5px;
+    border: 1px solid red;
+    width: 200px;
+  }
+  /*==============[FIM FORMATAÇÃO CATEGORIAS]=========*/
+  
+  /*==============[INICIO FORMATAÇÃO PARCELAMENTO]====*/
+  .parcelamento {
+    font-size: 7px;
+    color: cornflowerblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+  }
+  /*==============[FIM  FORMATAÇÃO PARCELAMENTO]======*/
+  
+  /*==============[INICIO FORMATAÇÃO PREÇODESCONTO]===*/
+  .precoDesconto {
+    font-size: 20px;
+  }
+  /*==============[FIM FORMATAÇÃO PREÇODESCONTO]======*/
+  
+  /*==============[INICIO FORMATAÇÃO I]===============*/
+  i {
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  /*==============[FIM FORMATAÇÃO I]==================*/
+  
+  /*==============[INICIO FORMATAÇÃO BOX_PRODUTOS]=====*/
+  .box_produto {
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+   /* width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    /*justify-content: center;
+    align-items: flex-start;*/
+  
+  
+    flex-wrap: wrap;
+    align-content: center;
+    /*align-items: baseline;*/
+    align-items: center;
+    display: inline-block;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0px 10px 80px 10px;
+    /*border: 1px solid red;*/
+    margin: 10px 10px 0px 35px;
+  }
+  /*==============[FIM FORMATAÇÃO BOX_PRODUTOS]========*/
+  /*==============[INICIO FORMATAÇÃO PRODUTOS]==================*/
+  .produtos {
+    
+    column-width: 25%;
+    column-count: 4;
+    
+  }
+  /*==============[FIM FORMATAÇÃO PRODUTOS]====================*/
+  /*==============[INICIO FORMATAÇÃO COLUNAS 2 3 4]====*/
+  .coluna2, .coluna3, .coluna4 {
+    width: 25px;
+    margin: 100px;
+    position: relative;
+  }
+  /*==============[FIM ORMATAÇÃO COLUNAS 2 3 4]=========*/
+  
+  /*==============[INICIO FORMATAÇÃO COLUNA 1]==========*/
+  .coluna1 {
+    position: relative;
+  }
+  /*==============[FIM FORMATAÇÃO COLUNA 1]==============*/
+  
+  /*==============[INICIO FORMATAÇÃO LOJAS]=============*/
+  .lojas {
+    width: 950px;
+    position: relative;
+    column-count: 3;
+    margin: 0px 00px 50px 215px;
+  }
+  /*==============[FIM FORMATAÇÃO LOJAS]===============*/
+  
+  /*==============[INICIO FORMATAÇÃO PVARGAS]==========*/
+  #rjMeio {
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  /*==============[FIM FORMATAÇÃO RJMEIO]===============*/
+  
+  /*==============[INICIO FORMATAÇÃO PVARGAS]===========*/
+  #pVargas {
+    margin-top: 41px;
+  }
+  /*==============[FIM FORMATAÇÃO PVARGAS]==============*/
+  
+  /*==============[INICIO FORMATAÇÃO PARCELAMENTO]======*/
+  .parcelamento:hover, .parcelamento:active {
+    font-size: 160%;
+    
+  }
+  /*==============[FIM FORMATAÇÃO PARCELAMENTO]==========*/
+  
+  /*==============[INICIO FORMATAÇÃO CONTATOFORMATADO]===*/
+  #contatoFormatado {
+    column-count: 2;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+  /*==============[FIM FORMATAÇÃO CONTATOFORMATADO]=======*/
+  
+  /*==============[INICIO FORMATAÇÃO MENSAGENENVIADA]=====*/
+  #mensagenEnviada {
+    text-align: center;
+  }
+  /*==============[FIM FORMATAÇÃO MENSAGENENVIADA]========*/
+  
+  /*==============[INICIO FORMATAÇÃO SRC]==================*/
+  src{
+    width: 150px;
+  }
+  /*==============[FIM FORMATAÇÃO SRC]======================*/
+  
+  /*==============[INICIO FORMATAÇÃO IMAGENS]================*/
+  .imagem_ajuste{
+    width: 100px;
+  }
+  /*==============[FIM FORMATAÇÃO IMAGENS]====================*/
+  
+  /*==============[INICIO FORMATAÇÃO GELADEIRAS]================*/
+  .g1:hover, .g1:active{
+    background-color:rgb(157, 255, 0);
+    font-size: 20px;
+  }
+  /*==============[FIM FORMATAÇÃO GELADEIRAS]===================*/
+  
+  /*==============[INICIO FORMATAÇÃO FOGÕES]====================*/
+  .f1:hover, .f1:active{
+    background-color:rgb(157, 255, 0);
+    font-size: 20px;
+  }
+  /*==============[FIM FORMATAÇÃO FOGÕES]=======================*/
+  
+  /*==============[INICIO FORMATAÇÃO MICROONDAS]================*/
+  .m1:hover, .m1:active{
+    background-color: rgb(157, 255, 0);
+    font-size: 20px;
+  }
+  /*==============[FIM FORMATAÇÃO MICROONDAS]===================*/
+  
+  /*==============[INICIO FORMATAÇÃO LAVA ROUPAS]===============*/
+  .lr1:hover, .lr1:active{
+    background-color:rgb(157, 255, 0);
+    font-size: 20px;
+  }
+  /*==============[FIM FORMATAÇÃO LAVA ROUPAS]==================*/
+  
+  /*==============[INICIO FORMATAÇÃO LAVA LOUÇAS]===============*/
+  .ll1:hover, .ll1:active{
+    background-color: rgb(157, 255, 0);
+    font-size: 20px;
+  }
+  /*==============[FIM FORMATAÇÃO LAVA LOUÇAS]==================*/
