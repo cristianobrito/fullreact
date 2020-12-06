@@ -1,0 +1,78 @@
+CREATE DATABASE fseletro;
+use fseletro;
+
+CREATE TABLE produtos (
+  id_produto INT NOT NULL AUTO_INCREMENT,
+  categoria varchar(45) NOT NULL,
+  descricao varchar(150) NOT NULL,
+  preco decimal(8,2) DEFAULT NULL,
+  precofinal decimal(8,2) DEFAULT NULL,
+  imagem varchar(255) DEFAULT NULL,
+  PRIMARY KEY (id_produto),
+  UNIQUE KEY imagem_UNIQUE (imagem)
+);
+
+INSERT INTO produtos 
+VALUES (1,'geladeira','Geladeira Frost Free Brastemp Side Inverse 540 litros',6389.00,5019.00,'file:///C:/Users/brito/Desktop/FULLSTACKELETRO/siterecode/fullstackeletro/imagens/geladeira1.jpg'),
+(2,'microondas','Microondas Panasonic 10 Litros',1099.00,759.00,'file:///C:/Users/brito/Desktop/FULLSTACKELETRO/siterecode/fullstackeletro/imagens/microondas1.jpg'),
+(3,'geladeira','Geladeira Frost Free Brastemp Side Inverse 540 litros',6389.00,5019.00,'file:///C:/Users/brito/Desktop/FULLSTACKELETRO/siterecode/fullstackeletro/imagens/geladeira2.jpg'),
+(4,'microondas','Microondas Panasonic 10 Litros',1099.00,759.00,'file:///C:/Users/brito/Desktop/FULLSTACKELETRO/siterecode/fullstackeletro/imagens/microondas2.jpg'),
+(5,'fogao','Fogão 5 Bocas Preto Confidente',2189.00,1998.00,'file:///C:/Users/brito/Desktop/FULLSTACKELETRO/siterecode/fullstackeletro/imagens/fogao1.webp'),
+(6,'lavaroupa','Lavadora Brastemp 20 Litros',2799.00,2459.00,'file:///C:/Users/brito/Desktop/FULLSTACKELETRO/siterecode/fullstackeletro/imagens/maquinadelavar1.jpg'),
+(7,'fogao','Fogão 5 Bocas Preto Confidente',2189.00,1998.00,'file:///C:/Users/brito/Desktop/FULLSTACKELETRO/siterecode/fullstackeletro/imagens/fogao2.jpg'),
+(8,'lavaroupa','Lavadora Brastemp 20 Litros',2799.00,2459.00,'file:///C:/Users/brito/Desktop/FULLSTACKELETRO/siterecode/fullstackeletro/imagens/lavaroupas3.png');
+
+describe produtos;
+
+select * from produtos;
+select * from pedidos;
+select * from comentarios;
+
+CREATE TABLE pedidos (
+  idpedido int NOT NULL AUTO_INCREMENT,
+  nomecliente varchar(50) DEFAULT NULL,
+  endereco varchar(100) DEFAULT NULL,
+  telefone bigint DEFAULT NULL,
+  nomeproduto varchar(50) DEFAULT NULL,
+  valorunitario decimal(10,5) DEFAULT NULL,
+  qunatidadeproduto int DEFAULT NULL,
+  valortotal float(10,5) DEFAULT NULL,
+  PRIMARY KEY (idpedido)
+);
+
+INSERT INTO pedidos 
+VALUES (11,'ana botafogo','rua:A',999999999,'Geladeira Frost Free Brastemp Side Inverse',5019.00000,1,5019.00000),
+(12,'marcos brasil','rua:b',888888888,'Microondas Panasonic',759.00000,1,759.00000),
+(13,'julio vasco','rua:c',777777777,'Lavadora Brastemp',2459.00000,1,2459.00000),
+(14,'sandra palmeiras','rua:d',666666666,'Fogão 5 Bocas Preto Confidente',1998.00000,1,1998.00000),
+(15,'cristiano flamengo','rua:e',555555555,'Geladeira Frost Free Brastemp Side Inverse',5019.00000,1,5019.00000),
+(16,'carlos augusto torres','rua:f',444444444,'Geladeira Frost Free Brastemp Side Inverse',5019.00000,1,5019.00000),
+(17,'zagalo','rua:A',333333333,'Lavadora Brastemp',2459.00000,1,2459.00000),
+(18,'gabriel flamengo','rua:b',222222222,'Fogão 5 Bocas Preto Confidente',1998.00000,1,1998.00000),
+(19,'bruno henrique flamengo','rua:c',111111111,'Microondas Panasonic',759.00000,1,759.00000),
+(20,'pedro fluminense','rua:d',999999999,'Geladeira Frost Free Brastemp Side Inverse',5019.00000,1,5019.00000);
+
+CREATE TABLE comentarios(
+id int auto_increment,
+nome varchar(100),
+msg varchar(300),
+data datetime default now(),
+primary key (id));
+
+select * from comentarios;
+
+SELECT * FROM pedidos ORDER BY nomecliente asc;
+SELECT * FROM pedidos ORDER BY nomecliente desc;
+SELECT * FROM pedidos ORDER BY nomecliente;
+SELECT  idpedido, nomecliente, telefone FROM pedidos ORDER BY nomecliente;
+SELECT  idpedido, nomecliente, telefone FROM pedidos ORDER BY nomecliente asc;
+SELECT  idpedido, nomecliente, telefone FROM pedidos ORDER BY nomecliente desc;
+SELECT  idpedido, nomecliente, telefone, nomeproduto FROM pedidos ORDER BY telefone, nomecliente, idpedido, nomeproduto;
+describe pedidos;
+describe produtos;
+ALTER TABLE pedidos ADD id_produto INT;
+ALTER TABLE pedidos ADD FOREIGN KEY (id_produto) REFERENCES produtos (id_produto);
+SELECT pedidos.idpedido, pedidos.nomecliente, pedidos.telefone, produtos.id_produto, produtos.categoria, produtos.preco FROM pedidos JOIN produtos;
+SELECT pedidos.idpedido, pedidos.nomecliente, pedidos.telefone, produtos.id_produto, produtos.categoria, produtos.preco FROM pedidos  JOIN produtos ON produtos.id_produto = pedidos.id_produto ORDER BY pedidos.nomecliente;
+SELECT * FROM pedidos;
+SELECT * FROM produtos;
